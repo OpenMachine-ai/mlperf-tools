@@ -103,8 +103,8 @@ print('float accuracy:', 100 * fp_pass_cnt / img_cnt, '  <--- this should be 80%
 print('int8 accuracy :', 100 * i8_pass_cnt / img_cnt, '  <--- this should be 80% or higher')
 print('image count   :', img_cnt, '  <--- this should be 1000')
 
-# TODO: it's strange that running this scripts in colab produces 85.9% accuracy
-# for int8, and on my MacBook M1 it produces 86.0%. Perhaps the rounding
+# TODO: it's strange that running this script in colab produces 85.9%
+# int8-accuracy, but 86.0% on my MacBook M1. Perhaps the rounding
 # done by the TFLite interpreter depends on the machine architecture.
 
 #-------------------------------------------------------------------------------
