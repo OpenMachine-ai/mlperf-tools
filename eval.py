@@ -8,6 +8,7 @@
 #
 # Alternatively, if you don't want to run this python script locally, you can
 # run in the cloud by opening the Jupyter Notebook eval.ipynb in your browser
+# https://colab.research.google.com/github/OpenMachine-ai/mlperf-tools/blob/main/eval.ipynb
 #
 # Whenever you change this script, make sure to regenerate the Jupyter Notebook
 # as follows:
@@ -45,7 +46,6 @@ def inference(intp, img):
   intp.set_tensor(intp.get_input_details()[0]['index'], img)
   intp.invoke()
   out = intp.get_tensor(intp.get_output_details()[0]['index'])[0][1]
-
   # for int8-model, convert int8 output (-128..127) to float 0.0 ... 1.0
   if np.issubdtype(out.dtype, np.integer):
     out = (out + 128) / 256
@@ -118,9 +118,11 @@ os.system('rm -Rf vww_96_float.tflite vww_96_int8.tflite')
 #-------------------------------------------------------------------------------
 #  - benchmark: https://github.com/mlcommons/tiny/tree/master/benchmark
 #  - VWW model: https://github.com/mlcommons/tiny/tree/master/benchmark/training/visual_wake_words
-#  - Paper "MLPerf tiny benchmark" https://arxiv.org/pdf/2106.07597.pdf
-#  - Paper "Visual Wake Words Dataset" https://arxiv.org/abs/1906.05721
+#  - Issue #135: https://github.com/mlcommons/tiny/issues/135
+#  - Paper 'MLPerf tiny benchmark' https://arxiv.org/pdf/2106.07597.pdf
+#  - Paper 'Visual Wake Words Dataset' https://arxiv.org/abs/1906.05721
 #  - Source of the data set:
 #    https://github.com/mlcommons/tiny/blob/master/benchmark/training/visual_wake_words/download_and_train_vww.sh
 #  - Repo with v1.1 benchmark results:
 #    https://github.com/mlcommons/tiny_results_v1.1/tree/main
+#  - Book TinyML https://www.abebooks.com/servlet/SearchResults?kn=TinyML
