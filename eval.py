@@ -12,8 +12,8 @@
 #
 # Whenever you change this script, make sure to regenerate the Jupyter Notebook
 # as follows:
-#   pip install p2j
-#   p2j eval.py
+#   pip install jupytext
+#   jupytext --to notebook eval.py
 
 import os, csv, PIL
 import numpy as np
