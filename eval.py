@@ -14,7 +14,12 @@
 # as follows:
 #   pip install jupytext
 #   jupytext --to notebook eval.py
+# The comments '# %% Cell 1' in the code below are cell delimiters for the
+# generated notebook cells. To get a better formated notebook, you could go
+# the other way and use eval.ipynb as the master file and generate eval.py
+# from it (via jupytext or nbconvert)
 
+# %% Cell 1
 import os, csv, PIL
 import numpy as np
 import tensorflow as tf
@@ -110,6 +115,7 @@ print('image count   :', img_cnt, '  <--- this should be 1000')
 #-------------------------------------------------------------------------------
 # clean up
 #-------------------------------------------------------------------------------
+# %% Cell 2
 os.system('rm -Rf vw_coco2014_96.tar.gz vw_coco2014_96 y_labels.csv')
 os.system('rm -Rf vww_96_float.tflite vww_96_int8.tflite')
 
