@@ -8,4 +8,4 @@ This repo contains the following tools for running MLPerf benchmarks:
   to measure their accuracy.
 - [eval.ipynb](eval.ipynb): Jupyter notebook generated from [eval.py](eval.py),
   click [here](https://colab.research.google.com/github/OpenMachine-ai/mlperf-tools/blob/main/eval.ipynb)
-  to run it in your browswer.
+  to run it from your browser.
