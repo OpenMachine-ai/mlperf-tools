@@ -1,3 +1,4 @@
+# %% Cell 1
 # For the tiny MLPerf visual wake word (vww) detection model, this script
 # downloads the dataset from Silabs and runs both TFLite reference models
 # (int8-model and float-model) with the 1000 images listed in y_labels.csv
@@ -19,7 +20,6 @@
 # the other way and use eval.ipynb as the master file and generate eval.py
 # from it (via jupytext or nbconvert)
 
-# %% Cell 1
 import os, csv, PIL
 import numpy as np
 import tensorflow as tf
@@ -112,10 +112,10 @@ print('image count   :', img_cnt, '  <--- this should be 1000')
 # int8-accuracy, but 86.0% on my MacBook M1. Perhaps the rounding
 # done by the TFLite interpreter depends on the machine architecture.
 
+# %% Cell 2
 #-------------------------------------------------------------------------------
 # clean up
 #-------------------------------------------------------------------------------
-# %% Cell 2
 os.system('rm -Rf vw_coco2014_96.tar.gz vw_coco2014_96 y_labels.csv')
 os.system('rm -Rf vww_96_float.tflite vww_96_int8.tflite')
 
