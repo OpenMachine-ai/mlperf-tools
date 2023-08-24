@@ -1,4 +1,3 @@
-# %% Cell 1
 # For the tiny MLPerf visual wake word (vww) detection model, this script
 # downloads the dataset from Silabs and runs both TFLite reference models
 # (int8-model and float-model) with the 1000 images listed in y_labels.csv
@@ -15,10 +14,8 @@
 # as follows:
 #   pip install jupytext
 #   jupytext --to notebook eval.py
-# The comments '# %% Cell 1' in the code below are cell delimiters for the
-# generated notebook cells. To get a better formated notebook, you could go
-# the other way and use eval.ipynb as the master file and generate eval.py
-# from it (via jupytext or nbconvert)
+# The comments '# %% Cell 2' in the code below are cell delimiters for the
+# generated notebook cells.
 
 import os, csv, PIL
 import numpy as np
