@@ -11,11 +11,10 @@
 # https://colab.research.google.com/github/OpenMachine-ai/mlperf-tools/blob/main/eval.ipynb
 #
 # Whenever you change this script, make sure to regenerate the Jupyter Notebook
-# as follows:
+# eval.ipynb as follows:
 #   pip install jupytext
 #   jupytext --to notebook eval.py
-# The comments '# %% Cell 2' in the code below are cell delimiters for the
-# generated notebook cells.
+# '# %%' in the code below marks the beginning of a new cell in the notebook
 
 import os, csv, PIL
 import numpy as np
@@ -109,13 +108,14 @@ print('image count   :', img_cnt, '  <--- this should be 1000')
 # int8-accuracy, but 86.0% on my MacBook M1. Perhaps the rounding
 # done by the TFLite interpreter depends on the machine architecture.
 
-# %% Cell 2
+# %%
 #-------------------------------------------------------------------------------
 # clean up
 #-------------------------------------------------------------------------------
 os.system('rm -Rf vw_coco2014_96.tar.gz vw_coco2014_96 y_labels.csv')
 os.system('rm -Rf vww_96_float.tflite vww_96_int8.tflite')
 
+# %%
 #-------------------------------------------------------------------------------
 # references for VWW of MLPerf tiny benchmark
 #-------------------------------------------------------------------------------
