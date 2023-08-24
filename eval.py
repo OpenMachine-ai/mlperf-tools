@@ -115,7 +115,7 @@ print('image count   :', img_cnt, '  <--- this should be 1000')
 os.system('rm -Rf vw_coco2014_96.tar.gz vw_coco2014_96 y_labels.csv')
 os.system('rm -Rf vww_96_float.tflite vww_96_int8.tflite')
 
-# %%
+# %% [markdown]
 #-------------------------------------------------------------------------------
 # references for VWW of MLPerf tiny benchmark
 #-------------------------------------------------------------------------------
